@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+    <link rel="icon" href="/blackjack/assets/icon.png">
+    <link rel="stylesheet" href="./blackjack.css">
+</head>
+
+<body>
+    <dialog id="mydialog">
+        <h2>How To Play?</h2>
+        <p>
+            Objective: Get a hand value closer to 21 than the dealer without exceeding 21.
+        </p>
+        <p>
+            Card Values: Number cards are worth their face value, face cards (J, Q, K) are 10 points, and Aces can be 1
+            or 11 points.
+        </p>
+        <p>
+            Initial Deal: Both player and dealer receive two cards. The player's cards are face up, while one of the
+            dealer's cards is face down.
+        </p>
+        <p>
+            Player's Turn: Choose to "Hit" (take another card) or "Stand" (keep current hand). You can keep hitting
+            until you decide to stand or your hand value exceeds 21.
+        </p>
+        <p>
+            Dealer's Turn: The dealer reveals their face-down card and must draw cards until their hand value is at
+            least 17.
+        </p>
+        <p>
+            Winning: You win if your hand value is closer to 21 than the dealer's without exceeding 21. If your hand
+            value exceeds 21, you bust and lose.
+        </p>
+        <p>
+            Blackjack: If your initial hand is an Ace and a 10-point card, you have a Blackjack and automatically win,
+            unless the dealer also has a Blackjack, resulting in a tie.
+        </p>
+        <p>
+            Push: If both you and the dealer have the same hand value, it's a tie, and you neither win nor lose.
+        </p>
+        <p>
+            Restart: Start a new game with a fresh deck and new initial deal.
+
+        </p>
+        <p>
+            Tips: Remember, the key is to get as close to 21 as possible without going over, and to consider the
+            dealer's visible card when deciding to hit or stand.
+        </p>
+        <button id="close-btn">Close</button>
+    </dialog>
+    <header>
+        <div>
+        <h1 id="heading-el">BlackJack</h1>
+        <i id="status-el">Want to Play a Round?</i>
+    </div>
+    </header>
+
+    <main>
+        <div id="parent">
+            
+            <div class="player">
+                <h2 id="playername-el">Player1</h2>
+                <h2 id="cards-el">Cards:</h2>
+                <div id="cards-div">
+                    <img src="/blackjack/assets/cards/back.png" id="one" height="160px" width="114px" alt="error">
+                    <img src="/blackjack/assets/cards/back.png" id="two" height="160px" width="114px" alt="error">
+                </div>
+                <h2 id="score-el">Score: </h2>
+            </div>
+
+            <div class="player">
+                <h2>Dealer</h2>
+                <h2 id="">Cards:</h2>
+                <div id="d-cards-div">
+                    <img src="/blackjack/assets/cards/back.png" id="d-one" height="160px" width="114px" alt="error">
+                    <img src="/blackjack/assets/cards/back.png" id="d-two" height="160px" width="114px" alt="error">
+                </div>
+                <h2 id="d-score-el">Score: </h2>
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <input id="name" type="text" placeholder="Enter your Name">
+            <br>
+            <div class="sel-div">
+                <h3 class="sel">Select Bet</h3>
+                <select class="sel-1" name="" id="bet-el" onchange="ChangeBet()">
+                    <option value="$5">$5</option>
+                    <option value="$10">$10 </option>
+                    <option value="$15">$15</option>
+                </select>
+            </div>
+            
+            <h3 id="amt" class="afterstart">$5</h3>
+            <h2 id="game-st"></h2>
+            <h2 id="message-el">Welcome to Blackjack</h2>
+            <div class="buttons-div">
+                <button id="hit-btn" class="afterstart">HIT</button>
+                <button id="stand-btn" onclick="switchPlayer()" class="afterstart">STAND</button>
+                <button id="startgame-btn" onclick="start()">START GAME</button>
+                <button id="instructions-btn">INSTRUCTIONS</button>
+            </div>
+            <button id="newgame-btn">NEW GAME</button>
+        </div>
+    </footer>
+
+
+    <script src="./blackjack.js"></script>
+
+</body>
+
+</html>

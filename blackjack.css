@@ -1,0 +1,283 @@
+
+body{
+    background-image: url(/blackjack/assets/bg-img/bg1.JPG);
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    color: white;   
+}
+
+h1{
+    color: rgb(225, 170, 31);
+    font-size: 6vw;
+    /* transition: font 2s; */
+    margin: .1em;
+}
+
+.sel-div{
+    padding: 20px;
+    margin-top: 10px;
+    border: solid white 1px;
+    border-radius: 8px;
+}
+
+.sel{
+    font-size: 20px;
+    display: inline;
+    font-weight: 600;
+}
+
+.sel-1{
+    opacity: 80%;
+    font-size: 20px;
+    display: inline;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+#amt{
+    color: lightgreen;
+    font-size: x-large;
+    padding: 0;
+    margin: 0;
+}
+
+/* .sel-1:active{
+   
+} */
+
+i{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2vw;
+    margin: .8vw;
+    /* font-weight: normal; */
+}
+
+button,#name{
+    text-align: center;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 150%;
+    height: 60px;
+    /* width: auto; */
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+#name{
+    margin-top: 50px;
+    width: 400px;
+}
+
+/* button:hover{
+    border: 2px solid white;
+} */
+
+button:active{
+    /* font-size: 24px; */
+    background-color: rgb(255, 161, 176) ;
+}
+
+/* #message-el{
+    font-size: 2.5vw;
+} */
+
+/* #newcard-btn{
+    display: none;    
+} */
+
+#newgame-btn{
+    display: none;
+}
+
+/* #cards-div{
+    display: none;  
+} */
+
+img{
+    margin: 10px;
+    border-radius: 6px;
+    animation: cardin 1s cubic-bezier(0.25, 0.1, 0.23, 0.98);
+} 
+
+/* img:hover{
+    filter: drop-shadow(0 0 10px #b3a9ff)
+} */
+#parent{
+    /* display: flex; */
+    /* visibility: hidden; */
+    display: none;
+    justify-content: center;
+    border: 1px dotted white;
+}
+.player{
+    min-height: 55vh;
+    width: 40vw;
+    margin: 0 5vw;
+}
+
+/* main{
+    height: 50vh;
+} */
+header{
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name{
+    /* background-color: transparent;
+    color: white;
+    font-size: 25px;
+    height: 57.5px;
+    width: 190px;
+    border-radius: 8px;
+    text-align: center; */
+    margin-top: 70px;
+}
+
+.afterstart{
+    display: none;
+}
+
+.buttons-div{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog{
+    text-align: start;
+    font-size: 1.3vw;
+    background-color:transparent;
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+#close-btn{
+    font-size: 1vw;
+    height: auto;
+    width: auto;
+}
+
+@media (max-width: 600px){
+    header{
+        height: auto;
+    }
+
+    dialog{
+        /* height: 80vh<; */
+        width: 80vw;
+        font-size: 2vh;
+    }
+
+    img{
+        height: 9.5vh;
+        width: 6.5vh;
+        margin: 6px;
+        border-radius: 3.6px;
+    }
+
+    .sel-div{
+        border-style: dotted;
+        padding: 10px;
+        /* width: ; */
+    }
+
+    .sel{
+        font-size: 90%;
+    }
+
+    .sel-1{
+        font-size: 90%;
+    }
+
+    #amt{
+        font-size: medium;
+    }
+
+    button,#name{
+        height: 5vh;
+        /* width: ; */
+        font-size: 90%;
+        border: 1px dotted white;
+        border-radius: 3.2px;
+    }
+
+    #name{
+        /* height: 25px; */
+        width: 250px;
+    }
+     
+    .buttons-div{
+        /* flex-direction: column; */
+        gap: .4em;
+    }
+
+    .player{
+        margin-top: 3vh;
+        width: 45vw;
+        min-height: 53vh;
+    }
+
+    h1{
+        margin-bottom: 3vh;
+        /* transition: none; */
+        font-size: 8vh;
+    }
+
+    p{
+        font-size: 80%;
+    }
+
+    h2,i{
+        font-size: 100%;
+        margin: 1vh;
+    }
+    body{
+        background-image: url(/blackjack/assets/bg-img/Slide3.jpg);
+        background-size: contain;
+    }
+}
+
+/* @keyframes flip{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(90deg);
+    }
+} */
+
+@keyframes flipback{
+    from{
+        transform: rotateY(90deg);
+    }
+    to{
+        transform: rotateY(0);
+    }
+}
+
+@keyframes cardin{
+    0%{
+        transform: translate(250%);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}
