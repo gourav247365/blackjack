@@ -250,7 +250,7 @@ dialog{
         margin: 1vh;
     }
     body{
-        background-image: url(/blackjack/assets/bg-img/Slide3.jpg);
+        background-image: url(/assets/bg-img/Slide3.jpg);
         background-size: contain;
     }
 }

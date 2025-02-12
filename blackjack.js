@@ -141,7 +141,7 @@ function hit(div_id,score_el,obj_el,call_flip) {
             document.getElementById(previd).style.animation='none';
         if(!gameover) {
             let newid='next'+i;
-            document.getElementById(div_id).innerHTML+=` <img src="/blackjack/assets/cards/back.png" id=${newid} height="160px" width="114px" alt="error" > `;  
+            document.getElementById(div_id).innerHTML+=` <img src="/assets/cards/back.png" id=${newid} height="160px" width="114px" alt="error" > `;  
             // document.getElementById(newid).style.animation='cardin 1s cubic-bezier(0.25, 0.1, 0.23, 0.98)'
             setTimeout(()=>{
                 call_flip(newid,obj_el,score_el,message);
@@ -163,7 +163,7 @@ function flip(card_id,obj_el,score_el,call_message) {
         tmp=Math.floor(Math.random()*4);
     }
     setTimeout(()=>{
-        document.getElementById(card_id).src="/blackjack/assets/cards/"+cardsdeck[card-1][tmp];    
+        document.getElementById(card_id).src="/assets/cards/"+cardsdeck[card-1][tmp];    
         cardsdeck[card-1][tmp]=null;
         document.getElementById(score_el).textContent="Score: "+ obj_el.score;
     },250);
