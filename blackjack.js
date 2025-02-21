@@ -142,7 +142,6 @@ function hit(div_id,score_el,obj_el,call_flip) {
         if(!gameover) {
             let newid='next'+i;
             document.getElementById(div_id).innerHTML+=` <img src="/assets/cards/back.png" id=${newid} height="160px" width="114px" alt="error" > `;  
-            // document.getElementById(newid).style.animation='cardin 1s cubic-bezier(0.25, 0.1, 0.23, 0.98)'
             setTimeout(()=>{
                 call_flip(newid,obj_el,score_el,message);
                 disablehitbtn=false;
@@ -166,7 +165,7 @@ function flip(card_id,obj_el,score_el,call_message) {
         document.getElementById(card_id).src="/assets/cards/"+cardsdeck[card-1][tmp];    
         cardsdeck[card-1][tmp]=null;
         document.getElementById(score_el).textContent="Score: "+ obj_el.score;
-    },250);
+    },200);
     document.getElementById(card_id).style.animation='flipback linear 0.25s 2 alternate-reverse';
     previd=card_id;
     if(card>=10)
@@ -187,8 +186,6 @@ function switchPlayer() {
     setTimeout(()=>{
         flip("d-two",obj2,"d-score-el",message);
     },1250);
-
-    // hitAndFlip();
 
     const ref= setInterval(()=>{
         if(obj.score >= obj2.score && obj2.score < 21){
