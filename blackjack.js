@@ -165,7 +165,7 @@ function flip(card_id,obj_el,score_el,call_message) {
         document.getElementById(card_id).src="/assets/cards/"+cardsdeck[card-1][tmp];    
         cardsdeck[card-1][tmp]=null;
         document.getElementById(score_el).textContent="Score: "+ obj_el.score;
-    },200);
+    },180);
     document.getElementById(card_id).style.animation='flipback linear 0.25s 2 alternate-reverse';
     previd=card_id;
     if(card>=10)
